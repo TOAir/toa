@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #2f0116, #921e1e);
+  font-family: &#039;Roboto&#039;, sans-serif;
+}
+section{
+  margin: 50px;
+}
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+</style>
+
+
+
+
+
+
+</head>
+<body>
+<section>
+  <!--for demo wrap-->
+  <h1>Fixed Table header</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Statue</th>
+          <th>Price</th>
+          <th>Vol</th>
+          <th>Ch %</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>ETH</td>
+          <td>SELL / HIGH </td>
+          <td>$1.38</td>
+          <td>+2.01</td>
+          <td>-0.36%</td>
+        </tr>
+        <tr>
+          <td>DASH</td>
+          <td>SELL / HIGH</td>
+          <td>$2.38</td>
+          <td>-0.01</td>
+          <td>-1.36%</td>
+        </tr>
+        <tr>
+          <td>ZEC</td>
+          <td>BUY / DOWN</td>
+          <td>$3.22</td>
+          <td>+0.01</td>
+          <td>+1.36%</td>
+        </tr>
+        <tr>
+          <td>WAVES</td>
+          <td>SELL / HIGH</td>
+          <td>$1.02</td>
+          <td>-1.01</td>
+          <td>+2.36%</td>
+        </tr>
+        <tr>
+          <td>LSK</td>
+          <td>SELL / DOWN </td>
+          <td>2.36</td>
+          <td>+2.01</td>
+          <td>-0.36%</td>
+        </tr>
+        <tr>
+          <td>BBC</td>
+          <td>BUY / HIGH</td>
+          <td>$2.38</td>
+          <td>-0.01</td>
+          <td>-1.36%</td>
+        </tr>
+        <tr>
+          <td>LTC</td>
+          <td>BUY / DOWN</td>
+          <td>$3.22</td>
+          <td>+0.01</td>
+          <td>+1.36%</td>
+        </tr>
+        <tr>
+          <td>NLC2</td>
+          <td>BUY / HIGH</td>
+          <td>$1.02</td>
+          <td>-1.01</td>
+          <td>+2.36%</td>
+        </tr>
+        <tr>
+          <td>HTML5</td>
+          <td>SELL / HIGH </td>
+          <td>$1.38</td>
+          <td>+2.01</td>
+          <td>-0.36%</td>
+        </tr>
+        <tr>
+          <td>BTC</td>
+          <td>BUY / DOWN</td>
+          <td>$2.38</td>
+          <td>-0.01</td>
+          <td>-1.36%</td>
+        </tr>
+        <tr>
+          <td>BITOK</td>
+          <td>BUY / DOWN </td>
+          <td>$3.22</td>
+          <td>+0.01</td>
+          <td>+1.36%</td>
+        </tr>
+        <tr>
+          <td>RUP</td>
+          <td>SELL / DOWN</td>
+          <td>$1.02</td>
+          <td>-1.01</td>
+          <td>+2.36%</td>
+        </tr>
+        <tr>
+          <td>DOGE</td>
+          <td>SELL / HIGH </td>
+          <td>$1.38</td>
+          <td>+2.01</td>
+          <td>-0.36%</td>
+        </tr>
+        <tr>
+          <td>BTG</td>
+          <td>SELL / DOWN</td>
+          <td>$2.38</td>
+          <td>-0.01</td>
+          <td>-1.36%</td>
+        </tr>
+        <tr>
+          <td>ATL</td>
+          <td>SELL / HIGH</td>
+          <td>$3.22</td>
+          <td>+0.01</td>
+          <td>+1.36%</td>
+        </tr>
+        <tr>
+          <td>FJC</td>
+          <td>SELL / HIGH</td>
+          <td>$1.02</td>
+          <td>-1.01</td>
+          <td>+2.36%</td>
+        </tr>
+        <tr>
+          <td>LINDA</td>
+          <td>SELL / HIGH </td>
+          <td>$1.38</td>
+          <td>+2.01</td>
+          <td>-0.36%</td>
+        </tr>
+        <tr>
+          <td>EDIT</td>
+          <td>SELL / DOWN</td>
+          <td>$2.38</td>
+          <td>-0.01</td>
+          <td>-1.36%</td>
+        </tr>
+        <tr>
+          <td>PWR</td>
+          <td>SELL / DOWN</td>
+          <td>$3.22</td>
+          <td>+0.01</td>
+          <td>+1.36%</td>
+        </tr>
+        <tr>
+          <td>BTCRED</td>
+          <td>SELL / HIGH</td>
+          <td>$1.02</td>
+          <td>-1.01</td>
+          <td>+2.36%</td>
+        </tr>
+        <tr>
+          <td>USD</td>
+          <td>BUY / DOWN</td>
+          <td>$1.38</td>
+          <td>+2.01</td>
+          <td>-0.36%</td>
+        </tr>
+        <tr>
+          <td>BUZZ</td>
+          <td>BUY / DOWN</td>
+          <td>$2.38</td>
+          <td>-0.01</td>
+          <td>-1.36%</td>
+        </tr>
+        <tr>
+          <td>VTC</td>
+          <td>SELL / HIGH</td>
+          <td>$3.22</td>
+          <td>+0.01</td>
+          <td>+1.36%</td>
+        </tr>
+        <tr>
+          <td>ELITE</td>
+          <td>BUY / HIGH</td>
+          <td>$1.02</td>
+          <td>-1.01</td>
+          <td>+2.36%</td>
+        </tr>
+        <tr>
+          <td>SLCO</td>
+          <td>BUY / DOWN</td>
+          <td>$1.38</td>
+          <td>+2.01</td>
+          <td>-0.36%</td>
+        </tr>
+        <tr>
+          <td>FLVR</td>
+          <td>BUY / DOWN</td>
+          <td>$2.38</td>
+          <td>-0.01</td>
+          <td>-1.36%</td>
+        </tr>
+        <tr>
+          <td>ZENI</td>
+          <td>SELL / HIGH</td>
+          <td>$3.22</td>
+          <td>+0.01</td>
+          <td>+1.36%</td>
+        </tr>
+        <tr>
+          <td>HMC</td>
+          <td>SELL / HIGH</td>
+          <td>$1.02</td>
+          <td>-1.01</td>
+          <td>+2.36%</td>
+        </tr>
+        <tr>
+          <td>TAG</td>
+          <td>SELL / HIGH</td>
+          <td>$1.38</td>
+          <td>+2.01</td>
+          <td>-0.36%</td>
+        </tr>
+        <tr>
+          <td>PROFIT</td>
+          <td>BUY / HIGH</td>
+          <td>$2.38</td>
+          <td>-0.01</td>
+          <td>-1.36%</td>
+        </tr>
+        <tr>
+          <td>STO</td>
+          <td>SELL / HIGH</td>
+          <td>$3.22</td>
+          <td>+0.01</td>
+          <td>+1.36%</td>
+        </tr>
+        <tr>
+          <td>MAX</td>
+          <td>BUY / HIGH</td>
+          <td>$1.02</td>
+          <td>-1.01</td>
+          <td>+2.36%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<script >
+$(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
+</script>
+</body>
+</html>
