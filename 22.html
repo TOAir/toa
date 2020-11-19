@@ -1,46 +1,56 @@
+
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>jQuery toTop.js: Back To Top Demo</title>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://rawcdn.githack.com/TOAir/toa/afdb2cd15674881d55e5d2b7349d6c2b5e82fd87/totop.min.js"></script>
-
-<style>
-.totop {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  cursor: pointer;
-  display: none;
-  background: #red;
-  color: #fff;
-  border-radius: 25px;
-  height: 50px;
-  line-height: 50px;
-  padding: 0 30px;
-  font-size: 18px;
-}
-</style>
-
-
-
-
-
-
+<script src="totop.min.js"></script>
 </head>
-<body>
 
-  <div class="totop"><i class="fa fa-angle-up"></i> To Top</div>
-  
-  
-  
-  
-  
-  
-  <div class="content">
-  <h1>Scroll Page Back To Top With jQuery </h1>
-  <h3>Here some text</h3>
+<body>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            font-family: 'Quicksand';
+        }
+        body { background-color: #FFCD69; }
+
+        .content {
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .content p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .totop {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            cursor: pointer;
+            display: none;
+            background: #a05b7e;
+            color: #fff;
+            border-radius: 25px;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 30px;
+            font-size: 18px;
+        }
+    </style>
+<div class="content">
+  <h1>jQuery toTop.js: Back To Top Demo</h1>
+
+  <h3>Scroll down the page</h3>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ratione provident cumque molestias reiciendis? Beatae atque, veritatis. Pariatur natus, autem possimus aspernatur ducimus porro, impedit dolor rem qui sed, tempore.</p>
   <p>Nesciunt ducimus, ea enim porro voluptatem, iusto fugit, voluptatum totam blanditiis placeat nostrum accusamus veritatis dignissimos modi aut ad. Odit beatae iure maxime est ipsum nemo fuga libero eligendi consequatur.</p>
   <p>Atque illum velit in soluta, repellat sit, iusto doloremque dignissimos necessitatibus cum facere praesentium voluptatum, possimus officiis, iure architecto modi quia pariatur. Quidem eos animi assumenda aperiam neque asperiores, velit!</p>
@@ -79,6 +89,12 @@
   <p>Odit doloremque laboriosam cum sapiente, explicabo, nobis aspernatur similique repudiandae omnis, fugit, optio esse! Obcaecati reprehenderit impedit consequatur commodi quibusdam cumque nemo facilis maxime! Quaerat praesentium consequuntur enim
     adipisci illo!</p>
 </div>
-
+<div class="totop"><i class="fa fa-angle-up"></i> To Top</div>
+<script>
+        $('.totop').tottTop({
+            scrollTop: 100
+        });
+    </script>
+   
 </body>
 </html>
