@@ -1,0 +1,177 @@
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>jQuery cssAnimateAuto Examples</title>
+<link href="https://rawcdn.githack.com/TOAir/toa/bd4987f6e2cbef0b0f6594d389f342786d7431dc/css-jquerysctipttop.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://rawcdn.githack.com/TOAir/toa/2aa22d45374c15327911c07737b6d22631d7f6df/jQuery-CSS3-cssAnimateAuto-main.css" />
+</head>
+<body>
+<div class="wrapper" style="margin-top:150px;">
+<h1>jQuery cssAnimateAuto Examples </h1>
+<h3>Basic</h3>
+<p>
+<button id="basic-height-btn">Height</button>
+</p>
+<div id="basic-height-content" class="hidden">
+<div class="hidden-inner">
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+</div>
+</div>
+<p>
+<button id="basic-width-btn">Width</button>
+</p>
+<div id="basic-width-content" class="hidden-width">
+<div class="hidden-inner">
+<div class="width-hidden-inner">And so it grows rightwards.</div>
+</div>
+</div>
+<button id="open-code-basic" class="open-code" data-code="basic">Show the JS</button>
+<button id="close-code-basic" class="close-code" data-code="basic" disabled>Hide the JS</button>
+<div id="code-basic" class="hidden-code">
+<div class="highlight">
+<pre><code class="js"><span class="lineno">1</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#basic-height-btn&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">2</span>   <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#basic-height-content&#39;</span><span class="p">).</span><span class="nx">cssAnimateAuto</span><span class="p">();</span>
+<span class="lineno">3</span> <span class="p">});</span>
+<span class="lineno">4</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#basic-width-btn&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">5</span>   <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#basic-width-content&#39;</span><span class="p">).</span><span class="nx">cssAnimateAuto</span><span class="p">(</span><span class="s1">&#39;width 0.3s&#39;</span><span class="p">);</span>
+<span class="lineno">6</span> <span class="p">});</span>
+</code></pre>
+</div>
+</div>
+<h3>The Accordion</h3>
+<dl class="accordion">
+<dt class="accordion-trigger" tabindex="0">Megrim</dt>
+<dd class="accordion-body hidden">
+<div class="accordion-body-inner">
+<p><i>n.</i> A form of headache usually confined to or beginning or predominating on one side of the head.</p>
+<p><i>n.</i> (plural) Lowness of spirits, as from headache or general physical disturbance; the 'blues'; a morbid or whimsical state of feeling.</p>
+</div>
+</dd>
+<dt class="accordion-trigger" tabindex="0">Giffgaff</dt>
+<dd class="accordion-body hidden">
+<div class="accordion-body-inner"> <i>n.</i> Mutual or reciprocal giving and taking; mutual obligation; tit for tat. </div>
+</dd>
+<dt class="accordion-trigger" tabindex="0">Chawbacon</dt>
+<dd class="accordion-body hidden">
+<div class="accordion-body-inner">
+<p><i>n.</i> A person who is not very intelligent or interested in culture.</p>
+<blockquote> I contend for it that all our civilisation is higher, and that class for class we are in a more advanced culture than the English; that your chawbacon is not as intelligent a being as our bogtrotter; that your petty shopkeeper is inferior to ours; that throughout our middle classes there is not only a higher morality but a higher refinement than with you. </blockquote>
+<p>&mdash; Charles Lever, Lord Kilgobbin</p>
+</div>
+</dd>
+</dl>
+<button id="open-code-accordion" class="open-code" data-code="accordion">Show the JS</button>
+<button id="close-code-accordion" class="close-code" data-code="accordion" disabled>Hide the JS</button>
+<div id="code-accordion" class="hidden-code">
+<div class="highlight">
+<pre><code class="js"><span class="lineno">1</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.accordion-trigger&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">2</span>   <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+<span class="lineno">3</span>     <span class="c1">// Spin the triangle.</span>
+<span class="lineno">4</span>     <span class="p">.</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s1">&#39;is-active&#39;</span><span class="p">)</span>
+<span class="lineno">5</span>     <span class="c1">// Open the body.</span>
+<span class="lineno">6</span>     <span class="p">.</span><span class="nx">next</span><span class="p">(</span><span class="s1">&#39;.accordion-body&#39;</span><span class="p">).</span><span class="nx">cssAnimateAuto</span><span class="p">();</span>
+<span class="lineno">7</span> <span class="p">});</span>
+</code></pre>
+</div>
+</div>
+<h3>The Dropdown Menu</h3>
+<p>Demonstrating the following:</p>
+<ul>
+<li>a custom CSS transition</li>
+<li>a custom <code>openClass</code></li>
+<li>how the plugin integrates into slightly more complicated JavaScript/jQuery activities</li>
+</ul>
+<p>Reduce your viewport size to see how the menu responds: the smoothly-animating dropdown becomes a smoothly-animating accordion.</p>
+<ul class="dropdown-menu">
+<li> <a href="javascript:void(0);" class="dropdown-trigger">About</a>
+<ul class="dropdown-submenu hidden">
+<li><a href="javascript:void(0);" class="dropdown-submenu-i">Our dogs</a></li>
+<li><a href="javascript:void(0);" class="dropdown-submenu-i">Our science</a></li>
+<li><a href="javascript:void(0);" class="dropdown-submenu-i">Our behavior</a></li>
+</ul>
+</li>
+<li> <a href="javascript:void(0);" class="dropdown-trigger">Because</a>
+<ul class="dropdown-submenu hidden">
+<li><a href="javascript:void(0);" class="dropdown-submenu-i">Because it hurts</a></li>
+<li><a href="javascript:void(0);" class="dropdown-submenu-i">Because we like it</a></li>
+</ul>
+</li>
+<li> <a href="javascript:void(0);" class="dropdown-trigger">Now</a> </li>
+<li> <a href="javascript:void(0);" class="dropdown-trigger">Directions</a>
+<ul class="dropdown-submenu hidden">
+<li><a href="javascript:void(0);" class="dropdown-submenu-i">Forwards</a></li>
+<li><a href="javascript:void(0);" class="dropdown-submenu-i">Backwards</a></li>
+<li><a href="javascript:void(0);" class="dropdown-submenu-i">Sideways</a></li>
+<li><a href="javascript:void(0);" class="dropdown-submenu-i">Bothways</a></li>
+<li><a href="javascript:void(0);" class="dropdown-submenu-i">Noways</a></li>
+</ul>
+</li>
+</ul>
+<button id="open-code-dd" class="open-code" data-code="dd">Show the JS</button>
+<button id="close-code-dd" class="close-code" data-code="dd" disabled>Hide the JS</button>
+<div id="code-dd" class="hidden-code">
+<div class="highlight">
+<pre><code class="js"><span class="lineno"> 1</span> <span class="kd">var</span> <span class="nx">ddActiveClass</span> <span class="o">=</span> <span class="s1">&#39;is-active&#39;</span><span class="p">,</span>
+<span class="lineno"> 2</span>     <span class="c1">// Some custom plugin settings.</span>
+<span class="lineno"> 3</span>     <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+<span class="lineno"> 4</span>       <span class="nx">transition</span><span class="o">:</span> <span class="s1">&#39;height 0.5s cubic-bezier(.31, .48, .28, .95)&#39;</span><span class="p">,</span>
+<span class="lineno"> 5</span>       <span class="nx">openClass</span><span class="o">:</span> <span class="nx">ddActiveClass</span>
+<span class="lineno"> 6</span>     <span class="p">};</span>
+<span class="lineno"> 7</span> <span class="c1">// Toggle when a trigger is clicked.</span>
+<span class="lineno"> 8</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.dropdown-menu &gt; li &gt; a&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno"> 9</span>   <span class="kd">var</span> <span class="nx">trigger</span> <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
+<span class="lineno">10</span>       <span class="nx">$otherOpenTriggers</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.dropdown-menu &gt; li &gt; a&#39;</span><span class="p">)</span>
+<span class="lineno">11</span>         <span class="p">.</span><span class="nx">not</span><span class="p">(</span><span class="nx">trigger</span><span class="p">)</span>
+<span class="lineno">12</span>         <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="nx">ddActiveClass</span><span class="p">);</span>
+<span class="lineno">13</span>   <span class="kd">function</span> <span class="nx">toggleSelf</span> <span class="p">()</span> <span class="p">{</span>
+<span class="lineno">14</span>     <span class="nx">$</span><span class="p">(</span><span class="nx">trigger</span><span class="p">).</span><span class="nx">toggleClass</span><span class="p">(</span><span class="nx">ddActiveClass</span><span class="p">)</span>
+<span class="lineno">15</span>       <span class="p">.</span><span class="nx">siblings</span><span class="p">(</span><span class="s1">&#39;ul&#39;</span><span class="p">).</span><span class="nx">cssAnimateAuto</span><span class="p">(</span><span class="nx">settings</span><span class="p">);</span>
+<span class="lineno">16</span>   <span class="p">}</span>
+<span class="lineno">17</span>   <span class="c1">// If other items are open, close them before toggling.</span>
+<span class="lineno">18</span>   <span class="k">if</span> <span class="p">(</span><span class="nx">$otherOpenTriggers</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">19</span>     <span class="nx">$otherOpenTriggers</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="nx">ddActiveClass</span><span class="p">)</span>
+<span class="lineno">20</span>       <span class="p">.</span><span class="nx">siblings</span><span class="p">(</span><span class="s1">&#39;ul&#39;</span><span class="p">).</span><span class="nx">cssAnimateAuto</span><span class="p">(</span><span class="s1">&#39;close&#39;</span><span class="p">,</span> <span class="nx">settings</span><span class="p">);</span>
+<span class="lineno">21</span>   <span class="p">}</span>
+<span class="lineno">22</span>   <span class="c1">// Do the toggling.</span>
+<span class="lineno">23</span>   <span class="nx">toggleSelf</span><span class="p">();</span>
+<span class="lineno">24</span> <span class="p">});</span>
+</code></pre>
+</div>
+</div>
+<h3>These Show/Hide the JS Buttons</h3>
+<p>How do they work? Have a look. They use a callback to disable the button once the transition/animation is complete.</p>
+<p>
+<button id="open-code-showhide" class="open-code" data-code="showhide">Show the JS</button>
+<button id="close-code-showhide" class="close-code" data-code="showhide" disabled>Hide the JS</button>
+</p>
+<div id="code-showhide" class="hidden-code">
+<div class="highlight">
+<pre><code class="js"><span class="lineno"> 1</span> <span class="kd">function</span> <span class="nx">toggleCode</span> <span class="p">(</span><span class="nx">$clicked</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 2</span>   <span class="kd">var</span> <span class="nx">codeTransition</span> <span class="o">=</span> <span class="s1">&#39;height 0.3s linear&#39;</span><span class="p">,</span>
+<span class="lineno"> 3</span>       <span class="nx">whichCode</span> <span class="o">=</span> <span class="nx">$clicked</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;code&#39;</span><span class="p">),</span>
+<span class="lineno"> 4</span>       <span class="nx">oppositeAction</span> <span class="o">=</span> <span class="p">(</span><span class="nx">action</span> <span class="o">===</span> <span class="s1">&#39;open&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;close&#39;</span> <span class="o">:</span> <span class="s1">&#39;open&#39;</span><span class="p">;</span>
+<span class="lineno"> 5</span>   <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#code-&#39;</span> <span class="o">+</span> <span class="nx">whichCode</span><span class="p">).</span><span class="nx">cssAnimateAuto</span><span class="p">(</span><span class="nx">action</span><span class="p">,</span> <span class="nx">codeTransition</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno"> 6</span>     <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">oppositeAction</span> <span class="o">+</span> <span class="s1">&#39;-code-&#39;</span> <span class="o">+</span> <span class="nx">whichCode</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="lineno"> 7</span>     <span class="nx">$clicked</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+<span class="lineno"> 8</span>   <span class="p">});</span>
+<span class="lineno"> 9</span> <span class="p">}</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.open-code&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">12</span>   <span class="nx">toggleCode</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span> <span class="s1">&#39;open&#39;</span><span class="p">);</span>
+<span class="lineno">13</span> <span class="p">});</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.close-code&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">16</span>    <span class="nx">toggleCode</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span> <span class="s1">&#39;close&#39;</span><span class="p">);</span>
+<span class="lineno">17</span> <span class="p">});</span>
+</code></pre>
+</div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+<script src="https://rawcdn.githack.com/TOAir/toa/f3a4d8bfab65bc22b948b636eda355e95f744319/jquery.cssAnimateAuto.js"></script> 
+<script src="https://rawcdn.githack.com/TOAir/toa/71fe0e41055b18fd864ee67175ed61b212b636c1/cssAnimateAuto-includes.js"></script> 
+
+</body>
+</html>
