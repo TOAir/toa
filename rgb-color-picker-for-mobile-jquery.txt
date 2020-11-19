@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Copyright Armin Junge
+-->
+<html>
+   <head>
+      <title>Test colorpicker Widget</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <link rel="stylesheet" href="https://rawcdn.githack.com/TOAir/toa/1d3182042902fa9d4e70516eb3172e886183f600/jqm-simple-colorpicker.min.css">
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+      <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <script src="https://rawcdn.githack.com/TOAir/toa/fa1e23d635ffa246f311638a009b82fb9fd51cdc/jqm-simple-colorpicker.min.js"></script>
+      <script type="text/javascript">
+         $(function(){
+            $('#picker').colorpicker('option', {
+               picked:function(event, data){
+                  $('div[data-role=page]').css('background-color', data.color)
+               },
+               defaultColor:$('div[data-role=page]').css('background-color')
+            })
+            $('#button').click(function(){
+               $('#picker').colorpicker('open')
+            })
+         })
+      </script>
+      <style>
+      body { font-family:'Roboto';}
+      </style>
+   </head>
+   <body>
+      <a id="button" href="#picker" data-rel="popup" class="ui-btn ui-btn-inline">Pick color</a>
+      <div id="picker" data-role="colorpicker" data-transition="turn">Test</div>
+      <h1 style="margin:30px auto; text-align:center;">jQuery Simple Colorpicker</h1>
+ 
+   </body>
+</html>
